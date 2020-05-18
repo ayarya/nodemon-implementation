@@ -19,5 +19,9 @@
 	"homepage": "https://github.com/ayarya/nodemon-implementation#readme",
 	"bin": {
 		"watchit": "index.js"
+	},
+	"dependencies": {
+		"chokidar": "^3.4.0",
+		"lodash.debounce": "^4.0.8"
 	}
 }
