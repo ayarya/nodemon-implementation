@@ -1,0 +1,23 @@
+{
+	"name": "nodemon-implementation",
+	"version": "1.0.0",
+	"description": "project which gave same functionality as nodemon",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ayarya/nodemon-implementation.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ayarya/nodemon-implementation/issues"
+	},
+	"homepage": "https://github.com/ayarya/nodemon-implementation#readme",
+	"bin": {
+		"watchit": "index.js"
+	}
+}
