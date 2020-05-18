@@ -4,6 +4,7 @@ const chokidar = require('chokidar');
 const debounce = require('lodash.debounce');
 const program = require('caporal');
 const fs = require('fs');
+const { spawn } = require('child_process');
 
 program.version('0.0.1').argument('[filename]', 'Name of a file to be execute').action(async ({ filename }) => {
 	const name = filename || 'index.js';
@@ -13,7 +14,7 @@ program.version('0.0.1').argument('[filename]', 'Name of a file to be execute').
 		throw new Error(`Could not find the file ${name}`);
 	}
 	const start = debounce(() => {
-		console.log('Starting User program');
+		spawn('node', [ name ], { stdio: 'inherit' });
 	}, 100);
 	chokidar.watch('.').on('add', start).on('change', start).on('unlink', start);
 });
